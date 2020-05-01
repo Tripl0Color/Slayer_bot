@@ -119,3 +119,17 @@ for event in longpoll.listen():
             random_id=event.random_id,
             message='я тут'
           )
+	if event.text == 'Профиль' or event.text == 'профиль':
+            if str(event.user_id) == admin_id:
+                vk.messages.send(
+                user_id=event.user_id,
+                random_id=event.random_id,
+                message='Твой профиль:\nID:' + str(event.user_id) + '\n Твоя роль:Admin💎'
+              )
+
+            elif str(event.user_id) != admin_id:
+                vk.messages.send(
+                user_id=event.user_id,
+                random_id=event.random_id,
+                message='Твой профиль:\nID:' + str(event.user_id) + '\n Твоя роль:User💡'
+              )
