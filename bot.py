@@ -119,10 +119,3 @@ for event in longpoll.listen():
             random_id=event.random_id,
             message='я тут'
           )
-
-        else:
-           vk.messages.send(
-           user_id=event.user_id,
-           random_id=event.random_id,
-           message='Каво?Список комманд - https://vk.com/@-194867465-komandy-bota'
-        )
