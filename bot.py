@@ -131,5 +131,5 @@ for event in longpoll.listen():
                 vk.messages.send(
                 user_id=event.user_id,
                 random_id=event.random_id,
-                message='Твой профиль:\nID:' + str(event.user_id) + '\n Твоя роль:User💡'
+		message='Твой профиль:\nID:' + str(event.user_id) + '\n Твоя роль: User💡' + '\nПредупреждений: ' +  str(warnings) + '❌' 
               )
