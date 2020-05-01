@@ -91,7 +91,7 @@ for event in longpoll.listen():
 
 
 
-        if event.text == '/help' or event.text == 'помощь':
+        if event.text == '/help' or event.text == 'помощь' or event.text == 'Помощь':
             vk.messages.send(
             user_id=event.user_id,
             random_id=event.random_id,
