@@ -119,6 +119,15 @@ for event in longpoll.listen():
             random_id=event.random_id,
             message='я тут'
           )
+	
+	if event.text == 'iq' or event.text == 'IQ':
+           iq = randint(40,200)
+           vk.messages.send(
+           user_id=event.user_id,
+           random_id=event.random_id,
+           message='Ваш iq ' + str(iq)
+           )
+	
 	if event.text == 'Профиль' or event.text == 'профиль':
             if str(event.user_id) == admin_id:
                 vk.messages.send(
