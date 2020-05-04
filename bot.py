@@ -13,6 +13,10 @@ vk_session = vk_api.VkApi(token='token')
 
 owm = pyowm.OWM('token',language = "RU")
 
+user_token = '' #vk user token
+
+
+
 longpoll = VkLongPoll(vk_session)
 vk = vk_session.get_api()
 ban_list = ['хуй','Хуй','пизда','Сука','еблан','дебил','идиот','пезда','хуесос','пиздется','хуево','cock','idiot','eblan','хуело']
